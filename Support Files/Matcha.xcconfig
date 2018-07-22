@@ -1,0 +1,13 @@
+//
+//  Matcha.xcconfig
+//  Matcha
+//
+//  Created by Kyohei Ito on 2018/07/21.
+//  Copyright © 2018年 CyberAgent, Inc. All rights reserved.
+//
+IPHONEOS_DEPLOYMENT_TARGET = 8.0
+MACOSX_DEPLOYMENT_TARGET = 10.10
+TVOS_DEPLOYMENT_TARGET = 9.0
+WATCHOS_DEPLOYMENT_TARGET = 2.0
+
+SUPPORTED_PLATFORMS = macosx iphoneos iphonesimulator watchos watchsimulator appletvos appletvsimulator
