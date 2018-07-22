@@ -1,0 +1,13 @@
+language: objective-c
+os: osx
+osx_image: xcode9.3
+before_install:
+  - gem install xcpretty
+before_script:
+  - set -o pipefail
+script:
+  - xcodebuild test -project ./Matcha.xcodeproj -scheme MatchaTests -configuration Debug -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.3,name=iPhone 7' | xcpretty -c
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+notifications:
+  email: false
