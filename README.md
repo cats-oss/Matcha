@@ -1,6 +1,8 @@
 # :tea: Matcha
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Build Status](https://travis-ci.org/cats-oss/Matcha.svg?branch=master)](https://travis-ci.org/cats-oss/Matcha)
+[![codecov](https://codecov.io/gh/cats-oss/Matcha/branch/master/graph/badge.svg)](https://codecov.io/gh/cats-oss/Matcha)
 [![Version](https://img.shields.io/cocoapods/v/MatchaTea.svg?style=flat)](http://cocoadocs.org/docsets/MatchaTea)
 [![License](https://img.shields.io/cocoapods/l/MatchaTea.svg?style=flat)](http://cocoadocs.org/docsets/MatchaTea)
 [![Platform](https://img.shields.io/cocoapods/p/MatchaTea.svg?style=flat)](http://cocoadocs.org/docsets/MatchaTea)
@@ -63,12 +65,12 @@ If you do not know any information of URL Path, match with the pattern after cre
 
 ```swift
 if let url = url {
-    let matcher = Matcha(url: url)
-    if matcher.matched("/") != nil {
+    let matcha = Matcha(url: url)
+    if matcha.matched("/") != nil {
         // to root
-    } else if matcher.matched("/notification") != nil {
+    } else if matcha.matched("/notification") != nil {
         // to notification
-    } else if let id = matcher.matched("/user/{userID}")?["userID"] {
+    } else if let id = matcha.matched("/user/{userID}")?["userID"] {
         // to user with id
     }
 }
