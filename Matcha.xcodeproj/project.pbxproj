@@ -11,7 +11,6 @@
 		C7CB4EAB2103645E00E78CBF /* MatchaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CB4EAA2103645E00E78CBF /* MatchaTests.swift */; };
 		C7CB4EAD2103645E00E78CBF /* Matcha.h in Headers */ = {isa = PBXBuildFile; fileRef = C7CB4E9F2103645E00E78CBF /* Matcha.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7CB4EB72103648200E78CBF /* Matcha.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CB4EB62103648200E78CBF /* Matcha.swift */; };
-		C7CB4EBA2103651300E78CBF /* Matcha.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C7CB4EB92103651300E78CBF /* Matcha.xcconfig */; };
 		C7CB4EBC2103666000E78CBF /* NSRegularExpressionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CB4EBB2103666000E78CBF /* NSRegularExpressionExtension.swift */; };
 		C7CB4EC02103668200E78CBF /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CB4EBF2103668200E78CBF /* ArrayExtension.swift */; };
 		C7CB4EC42103674D00E78CBF /* ArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CB4EC32103674D00E78CBF /* ArrayExtensionTests.swift */; };
@@ -169,7 +168,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "CyberAgent, Inc.";
 				TargetAttributes = {
 					C7CB4E9B2103645E00E78CBF = {
@@ -178,6 +177,7 @@
 					};
 					C7CB4EA42103645E00E78CBF = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -204,7 +204,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7CB4EBA2103651300E78CBF /* Matcha.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
