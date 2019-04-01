@@ -21,7 +21,7 @@ matcha?.value(at: 0)            // "1"
 
 ## Requirements
 
-- Swift 4.1
+- Swift 5.0
 
 ## How to Install
 
