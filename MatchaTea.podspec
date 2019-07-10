@@ -12,5 +12,6 @@ Pod::Spec.new do |s|
   s.osx.deployment_target       = '10.10'
   s.watchos.deployment_target   = '2.0'
   s.source_files     = 'Matcha/**/*.{h,swift}'
+  s.module_name = 'Matcha'
   s.requires_arc     = true
 end
