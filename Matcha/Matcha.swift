@@ -83,14 +83,13 @@ public struct Matcha: Equatable {
         var values: [String: String] = [:]
         var list: [String] = []
 
-        guard let pathRegex = try? NSRegularExpression(pattern: "^\\{(.+?)\\}$") else { return nil }
         for (pattern, path) in zip(paths, url.pathComponents) {
             if pattern == path || path == "/" {
                 continue
             }
 
-            if let matched = pathRegex.firstMatch(in: pattern) {
-                values[(pattern as NSString).substring(with: matched.range(at: 1))] = path
+            if pattern.first == "{" && pattern.last == "}" {
+                values[String(pattern.dropFirst().dropLast())] = path
                 list.append(path)
             }
             else {
