@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'MatchaTea'
-  s.version          = '0.3.0'
+  s.version          = '0.4.0'
   s.swift_version    = '5.0'
   s.summary          = 'Matcha is Framework that can get parameters from URL Path.'
   s.homepage         = 'https://github.com/cats-oss/Matcha'
