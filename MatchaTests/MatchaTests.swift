@@ -20,6 +20,8 @@ class MatchaTests: XCTestCase {
         XCTAssertNil(matcha["path"])
 
         XCTAssertNil(matcha.matched("https://exampl.com/path/to/glory"))
+        XCTAssertNil(matcha.matched("https://example.com/path/to/glory/test/"))
+        XCTAssertNil(matcha.matched("https://example.com/path/to/glory/test"))
         XCTAssertNil(matcha.matched("https://example.com/path/to/g"))
         XCTAssertNil(matcha.matched("https://example.com/path/to"))
         XCTAssertNil(matcha.matched("https://example.com/"))

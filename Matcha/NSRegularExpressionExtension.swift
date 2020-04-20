@@ -10,6 +10,6 @@ import Foundation
 
 extension NSRegularExpression {
     func firstMatch(in string: String, options: NSRegularExpression.MatchingOptions = [], range: NSRange? = nil) -> NSTextCheckingResult? {
-        return firstMatch(in: string, options: options, range: range ?? NSRange(location: 0, length: string.count))
+        firstMatch(in: string, options: options, range: range ?? NSRange(location: 0, length: string.count))
     }
 }

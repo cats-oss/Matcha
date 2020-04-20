@@ -6,10 +6,8 @@
 //  Copyright © 2018年 CyberAgent, Inc. All rights reserved.
 //
 
-import Foundation
-
 extension Array {
     subscript(safe index: Int) -> Element? {
-        return indices ~= index ? self[index] : nil
+        indices ~= index ? self[index] : nil
     }
 }

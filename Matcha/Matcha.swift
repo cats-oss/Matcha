@@ -13,14 +13,14 @@ public struct Matcha: Equatable {
     /// - Parameter key: key of the value you want to retrieve.
     /// - Returns: value of key
     public subscript(_ key: String) -> String? {
-        return value(of: key)
+        value(of: key)
     }
 
     /// value of index
     /// - Parameter key: index of the value you want to retrieve.
     /// - Returns: value of index
     public subscript(_ index: Int) -> String? {
-        return value(at: index)
+        value(at: index)
     }
 
     private let values: [String: String]
@@ -32,18 +32,18 @@ public struct Matcha: Equatable {
     /// - Parameter key: key of the value you want to retrieve.
     /// - Returns: value of key
     public func value(of key: String) -> String? {
-        return values[key]
+        values[key]
     }
 
     /// value of index
     /// - Parameter key: index of the value you want to retrieve.
     /// - Returns: value of index
     public func value(at index: Int) -> String? {
-        return list[safe: index]
+        list[safe: index]
     }
 
     public func matched(_ pattern: String) -> Matcha? {
-        return Matcha(url: url, pattern: pattern)
+        Matcha(url: url, pattern: pattern)
     }
 
     /// initialize the matcher
@@ -75,7 +75,10 @@ public struct Matcha: Equatable {
 
         let paths = (patternUrl as NSString).substring(with: matched.range(at: 0)).split(separator: "/").map(String.init)
 
-        guard (url.host == paths.first || isPath) && (url.pathComponents.count == paths.count || (url.pathComponents.isEmpty && paths.count == 1)) else { return nil }
+        guard (url.host == paths.first || isPath)
+            && (url.pathComponents.count == paths.count || (url.pathComponents.isEmpty && paths.count == 1)) else {
+                return nil
+        }
 
         var values: [String: String] = [:]
         var list: [String] = []
@@ -89,7 +92,8 @@ public struct Matcha: Equatable {
             if let matched = pathRegex.firstMatch(in: pattern) {
                 values[(pattern as NSString).substring(with: matched.range(at: 1))] = path
                 list.append(path)
-            } else {
+            }
+            else {
                 return nil
             }
         }
